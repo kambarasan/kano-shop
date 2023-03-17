@@ -1,13 +1,196 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #fff;
+    color: #222;
+    font-family: 'Montserrat',sans-serif;
+}
+.wrapper{
+    width:1100px;
+    margin: 50px auto;
+}
+.logo{
+    font-weight: 600;
+    font-size: 20px;
+}
+.presentation{
+    margin: 50px 0;
+    background: url("img/4.jpg")no-repeat center/cover #bcbcbc;
+    width: 100%;
+    height: 500px;
+    background-blend-mode: multiply;
+    position: relative;
+}
+.presentation:after{
+    content: 'Лучшие товары для вашего дома';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    font-size: 40px;
+    font-weight: 600;
+    width: 300px;
+    color: #fff;
+}
+.shop-btn{
+    float: right;
+    cursor: pointer;
+    transition: color 500ms ease;
+}
+.mei{
+    width: 100%;
+    padding: 20px ;
+}
+.mei img{
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+.mei h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.mei b{
+   color: limegreen;
+    font-weight: 600;
+}
+.shop-btn:hover,
+.shop-btn.active{
+    color: springgreen;
+    transform: scale(1.5);
+}
+header{
+    position: relative;
+}
+.empty h2{
+    text-align: center;
+    color: red;
+    padding: 20px;
+}
+.delete-icon{
+    color: red;
+    float: right;
+    position: relative;
+    top: -25px;
+    left: -30px;
+    cursor: pointer;
+    transition: transform    500ms ease;
+}
+.delete-icon:hover{
+    transform: scale(1.5);
+}
+.shop-cart{
+    position: absolute;
+    top: 70px;
+    left: 944px;
+    z-index: 1;
+    width: 450px;
+    background: #fff;
+    -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    padding: 20px;
+}
+.presentation:before{
+    content: 'по низким ценам';
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+.nis{
+    text-align: center;
+    padding: 50px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav{
+    float: right;
+    list-style: none;
 }
+.nav li{
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+.nav li:hover{
+    opacity: 0.5;
+}
+
+.main{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.item{
+    width: 30%;
+    margin-bottom: 50px;
+    background: #f5f5f5;
+    transition: transform 500ms ease;
+}
+.item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+.full-item{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+    overflow: auto;
+}
+.div{
+    width: 600px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 9px;
+}
+.full-item img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.item img:hover{
+    transform: scale(1.05);
+}
+.item h2,p, b,
+.full-item h2,p, b{
+    padding:10px;
+    color: #333;
+}
+.add-to-card{
+    background: #ca5252;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 500ms ease;
+}
+.add-to-card:hover{
+    transform: scale(1.3);
+    background: limegreen;
+}
+.all{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item b,
+.full-item b{color: #5fa36a}
